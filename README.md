@@ -35,7 +35,3 @@ Ce projet s'inscrit dans le cadre d'un travail académique visant à explorer de
 ## 📈 Résultats
 Le modèle final offre une capacité robuste de prédiction du sentiment avec un équilibre entre précision et rappel, démontrant l'efficacité de la préparation de données et du choix des algorithmes.
 
-## 🚀 Comment exécuter le projet
-1. Cloner le dépôt GitHub :
-   ```bash
-   git clone https://github.com/votre-utilisateur/analyse-sentiments-imdb.git
