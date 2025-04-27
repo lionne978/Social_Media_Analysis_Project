@@ -1,37 +1,51 @@
-# 🎬 Analyse des Sentiments de Critiques de Films (IMDB)  
-**Projet académique | UNCHK | Octobre - Novembre 2024**
+# 🌐 Analyse de Réseaux Sociaux : Facebook  
+**Projet académique | UNCHK | 2024**
 
-## 📚 Contexte
-Ce projet s'inscrit dans le cadre d'un travail académique visant à explorer des techniques de traitement du langage naturel (NLP) et de Machine Learning. L'objectif est de construire un modèle performant capable de prédire le sentiment (positif ou négatif) à partir de critiques de films issues d'IMDB.
-
-## 📂 Dataset
-- **Source** : Plateforme Kaggle ([IMDB Dataset of 50K Movie Reviews](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews))  
-- **Taille** : 50 000 critiques de films équilibrées entre classes positives et négatives.
+## 📚 Objectif
+Analyser un réseau social à partir du dataset **facebook_combined.txt** disponible sur le site **Stanford Network Analysis Project (SNAP)**, en appliquant des méthodes d’analyse de graphes et de réseaux sociaux.
 
 ## 🛠️ Outils et Technologies
 - **Python** (via **Jupyter Notebook**)
-- **Bibliothèques principales** :
-  - `pandas`, `numpy` pour la manipulation des données
-  - `nltk`, `re` pour le traitement du texte
-  - `scikit-learn` pour la modélisation machine learning
-  - `matplotlib`, `seaborn` pour la visualisation des données
+- **NetworkX** pour la manipulation de graphes
+- **Pandas**, **NumPy** pour le traitement des données
+- **Matplotlib** pour la visualisation
+- **community** (python-louvain) pour la détection de communautés
 
-## 🧹 Processus
-- **Nettoyage des données** : suppression des caractères spéciaux, mise en minuscules, retrait des stopwords.
-- **Analyse exploratoire** :
-  - Identification des mots les plus fréquents dans les critiques positives et négatives.
-  - Visualisation via nuages de mots.
-- **Modélisation** :
-  - Vectorisation des textes avec TF-IDF.
-  - Application de plusieurs algorithmes de classification :
-    - Régression Logistique
-    - Random Forest
-    - Support Vector Machine (SVM)
-  - Sélection du meilleur modèle basé sur la précision et le lift.
-- **Résultats** :
-  - **Précision finale** : 90%
-  - **Lift** : 34%
+## 📂 Étapes principales
+1. **Importation des bibliothèques**
+   - `networkx`, `pandas`, `numpy`, `matplotlib`, `community`
 
-## 📈 Résultats
-Le modèle final offre une capacité robuste de prédiction du sentiment avec un équilibre entre précision et rappel, démontrant l'efficacité de la préparation de données et du choix des algorithmes.
+2. **Chargement des données**
+   - Lecture du fichier `facebook_combined.txt`
+   - Affichage du nombre de nœuds et d’arêtes
+   - Première visualisation du graphe
+
+3. **Analyse des métriques topologiques globales**
+   - Calcul de la densité
+   - Calcul du diamètre
+   - Calcul du coefficient de clustering moyen
+
+4. **Analyse des métriques de centralité**
+   - Degré
+   - Centralité de proximité
+   - Centralité d'intermédiarité
+   - Centralité de vecteur propre
+   - Visualisation des distributions et identification des nœuds influents
+
+5. **Détection de communautés**
+   - Utilisation de l'algorithme de Louvain
+   - Visualisation des communautés
+   - Affichage du nombre de communautés détectées
+
+6. **Simulation de diffusion d'information**
+   - Simulation de la propagation de contenu à partir des nœuds les plus influents
+   - Comparaison de la diffusion selon différentes mesures de centralité
+
+## 🧠 Concepts abordés
+- **Métriques topologiques globales** : densité, diamètre, coefficient de clustering
+- **Centralités** : degré, proximité, intermédiaire, vecteur propre
+- **Analyse structurale** : composantes connexes, sous-graphes
+- **Détection de communautés** : Louvain, Girvan-Newman
+- **Diffusion de contenu** sur un réseau social
+- **Campagnes de marketing viral** via ciblage des influenceurs
 
